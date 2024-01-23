@@ -51,4 +51,13 @@ app.get("/reviews/:modelId", (req, res) => {
   res.json(filteredReviews);
 })
 
+app.get("/reviews/category/:categoryId", (req, res) => {
+  const categoryId = Number(req.params.categoryId);
+  const reviewsFiltered = data.reviews.filter(
+    (review) => review.category_id === categoryId
+  );
+
+  res.json(reviewsFiltered);
+});
+
 module.exports = app;

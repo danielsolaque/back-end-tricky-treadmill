@@ -8,6 +8,16 @@
  * }
  */
 
+///Handle this like a component in your FrontEnd
+// const categories = ["noise", "resistance issues", "handlebar instability"];
+
+// <select>
+//   {categories.map(category){
+//     return (<option value="category">category</option>);
+//   }}
+// </select>
+
+
 const brands = [
   {
     brand_id: 1,
@@ -100,12 +110,14 @@ const models = [
   }
 ];
 
+// SELECT * FROM reviews WHERE category = 'noise';
+
 const reviews = [
   {
     review_id: 1,
     problem_title: "Louder noises",
     name: "Jordan",
-    category_id: 3,
+    category_id: 2,
     model_id: 2,
     brand_id: 10,
     problem_description: "Treadmill is making noises once I start running",
@@ -151,7 +163,7 @@ const reviews = [
     review_id: 5,
     problem_title: "Handlebar instability",
     name: "Olivia",
-    category_id: 5,
+    category_id: 4,
     model_id: 4,
     brand_id: 9,
     problem_description:
@@ -196,13 +208,74 @@ const reviews = [
 ];
 
 
+
 const categories = [
   {
     category_id: 1,
     category_name: "noises",
-    review_id: 1,
+  },
+  {
+    category_id: 2,
+    category_name: "malfunction",
+  },
+  {
+    category_id: 3,
+    category_name: "uneven movement",
+  },
+  {
+    category_id: 4,
+    category_name: "resistance issues",
+  },
+  {
+    category_id: 5,
+    category_name: "handlebar instability",
+  },
+  {
+    category_id: 6,
+    category_name: "display issues",
+  },
+  {
+    category_id: 7,
+    category_name: "pedal alignment",
+  },
+  {
+    category_id: 8,
+    category_name: "heart rate monitor",
+  },
+  {
+    category_id: 9,
+    category_name: "noises",
+  },
+  {
+    category_id: 10,
+    category_name: "malfunction",
+  },
+  {
+    category_id: 11,
+    category_name: "uneven movement",
+  },
+  {
+    category_id: 12,
+    category_name: "resistance issues",
+  },
+  {
+    category_id: 13,
+    category_name: "handlebar instability",
+  },
+  {
+    category_id: 14,
+    category_name: "display issues",
+  },
+  {
+    category_id: 15,
+    category_name: "pedal alignment",
+  },
+  {
+    category_id: 16,
+    category_name: "heart rate monitor",
   },
 ];
+
 
 module.exports = {
   brands,
